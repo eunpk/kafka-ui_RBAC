@@ -1,0 +1,14 @@
+.idea/
+.venv/
+.dockerignore
+.git
+.gitignore
+.streamlit
+
+Dockerfile
+*.yaml
+**/__pycache__/
+__pycache__/
+
+config/
+dev.py

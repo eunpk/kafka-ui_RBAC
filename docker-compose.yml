@@ -1,8 +1,10 @@
  version: "3"
  services:
-    streamlit:
-      container_name: streamlit
-      image: 368175631214.dkr.ecr.ap-northeast-2.amazonaws.com/streamlit:latest
+    kafkaui_rbac:
+      platform: linux/amd64
+      build:
+        dockerfile: Dockerfile
+      image: kafkaui_rbac:local
       ports:
         - "8501:8501"
       volumes:
@@ -10,3 +12,4 @@
         - ./config/credentials:/root/.aws/credentials
         - ./config/k8scontext:/app/config/k8scontext
         - ./config/kafkaui_action.json:/app/config/kafkaui_actions.json
+      container_name: kafkaui_rbac

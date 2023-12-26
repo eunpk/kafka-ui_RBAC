@@ -2,7 +2,7 @@
  services:
     streamlit:
       container_name: streamlit
-      image: streamlit
+      image: 368175631214.dkr.ecr.ap-northeast-2.amazonaws.com/streamlit:latest
       ports:
         - "8501:8501"
       volumes:
